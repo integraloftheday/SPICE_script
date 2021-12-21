@@ -7,3 +7,4 @@ class MatrixEntry {
         this.value = value;
     }
 }
+

@@ -3,6 +3,8 @@ class ComponentTemplate{
 
     constructor(matrix){
         this.matrix = matrix; 
+        this.value; 
+        this.id;
     }
 
     fullMatrix(numberNets){
