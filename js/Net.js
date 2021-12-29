@@ -26,6 +26,15 @@ class Net {
             else if(element[0][0] == "R"){ //resistor
                 this.addComponent(new Resistor(element[0],parseInt(element[1]),parseInt(element[2]),1/parseFloat(element[3])));
             }
+            else if(element[0][0] == "V"){ //voltage source
+                this.addComponent(new VoltageSource(element[0],parseInt(element[1]),parseInt(element[2]),parseFloat(element[3])));
+            }
+            else if(element[0][0] == "L"){ //inductor
+                this.addComponent(new Inductor(element[0],parseInt(element[1]),parseInt(element[2]),1/parseFloat(element[3]),0/*rad/s omega*/ ));
+            }
+            else if(element[0][0] == "C"){ //capacitor
+                this.addComponent(new Capacitor(element[0],parseInt(element[1]),parseInt(element[2]),parseFloat(element[3]),0/*rad/s omega*/ ));
+            }
             i++;
         }
         //console.log(nodes);
